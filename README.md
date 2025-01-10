@@ -37,3 +37,16 @@ Este proyecto está inspirado y basado en el trabajo original de [Luis Contreras
    ```bash
    go mod tidy
   ```
+
+  ```bash
+go build -o swiftedge
+```
+```bash
+./swiftedge monitor --user=<usuario> --password=<contraseña> --host=<host> --database=<base_de_datos>
+```
+Ejemplo:
+```bash
+./swiftedge monitor --user=root --password=1234 --host=localhost --database=testdb
+```
+
+
