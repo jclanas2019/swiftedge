@@ -34,7 +34,7 @@ Este proyecto está inspirado y basado en el trabajo original de [Luis Contreras
    cd swiftedge
    ```
 2. Instala las Dependencias:
-   ```bash
+  ```bash
    go mod tidy
   ```
 3. Compila el Proyecto:
