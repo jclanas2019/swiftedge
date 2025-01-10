@@ -1,0 +1,16 @@
+go mod init swiftedge
+
+go mod tidy
+
+go get github.com/spf13/cobra
+
+go get github.com/shirou/gopsutil
+
+go get github.com/gizak/termui/v3
+
+go get github.com/go-sql-driver/mysql
+
+cat go.mod
+
+go build -o swiftedge
+
