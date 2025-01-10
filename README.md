@@ -33,14 +33,15 @@ Este proyecto está inspirado y basado en el trabajo original de [Luis Contreras
    git clone https://github.com/jclanas2019/swiftedge.git
    cd swiftedge
    ```
-
+2. Instala las Dependencias:
    ```bash
    go mod tidy
   ```
-
+3. Compila el Proyecto:
   ```bash
 go build -o swiftedge
 ```
+4. Ejecuta el Comando CLI:
 ```bash
 ./swiftedge monitor --user=<usuario> --password=<contraseña> --host=<host> --database=<base_de_datos>
 ```
@@ -48,5 +49,54 @@ Ejemplo:
 ```bash
 ./swiftedge monitor --user=root --password=1234 --host=localhost --database=testdb
 ```
+
+Uso
+
+CLI
+El comando principal es monitor, que inicia el monitoreo de métricas de la base de datos y del sistema en tiempo real. Opciones disponibles:
+
+```bash
+./swiftedge monitor --user=<usuario> --password=<contraseña> --host=<host> --database=<base_de_datos>
+```
+Como SDK
+Puedes integrar SwiftEdge en tus proyectos importando el módulo correspondiente:
+
+```go
+package main
+
+import (
+    "log"
+    "swiftedge/sdk/monitor"
+)
+
+func main() {
+    err := monitor.Run("root", "1234", "localhost", "testdb")
+    if err != nil {
+        log.Fatalf("Error iniciando el monitor: %v", err)
+    }
+}
+```
+Contribuciones
+
+¡Contribuciones son bienvenidas! Por favor, sigue estos pasos para colaborar:
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tus cambios:
+```bash
+git checkout -b feature/nueva-funcionalidad
+```
+3. Realiza un commit con tus cambios:
+```bash
+git commit -m "Añadir nueva funcionalidad"
+```
+4. Sube tus cambios:
+```bash
+git push origin feature/nueva-funcionalidad
+```   
+5. Abre un pull request en el repositorio principal.
+
+Licencia
+
+Este proyecto está bajo la licencia MIT. 
 
 
